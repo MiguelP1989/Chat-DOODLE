@@ -11,19 +11,37 @@
   background-size: 400px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-
-  justify-content: flex-end;
 }
 
 .chat-container {
   padding: 0 24px 16px 14px;
   display: flex;
   flex-direction: column;
-  width: 70%;
-  height: 700px;
+  width: 50%;
+  height: 90%;
   box-shadow: 1px 3px 70px rgba(169, 166, 166, 0.4);
   background-image: url("../../assets/Body\ BG.png");
   margin: 0 auto;
   overflow: scroll;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+@media (max-width: 500px) {
+  .chat-container {
+    width: 95%;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .chat-container {
+    height: 100%;
+  }
 }

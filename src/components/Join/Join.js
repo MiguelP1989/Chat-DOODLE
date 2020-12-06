@@ -35,7 +35,9 @@ const Join = () => {
         <div className="form-join">
           <input {...inputProps} />
           <Link {...linkProps}>
-            <button type="submit">Enter</button>
+            <button className="join-btn" type="submit">
+              Enter
+            </button>
           </Link>
         </div>
       </div>
