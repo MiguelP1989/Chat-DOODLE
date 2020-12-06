@@ -46,7 +46,8 @@
   .form-container {
     width: 100%;
   }
-  .chat-container {
+
+  .chat-outer-container {
     height: 100%;
   }
 }
