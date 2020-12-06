@@ -1,5 +1,5 @@
 // Third-party imports
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment";
 
 // Global imports
@@ -15,8 +15,36 @@ const Chat = () => {
   // Hooks
   const [messageArray, setMessageArray] = useState([]);
 
+  useEffect(() => {
+    fetchMessages();
+  }, []);
+
+  const fetchMessages = async () => {
+    // Get messages request
+    const url = `https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=hHoTRd9y8HYs&since=1607269686876`;
+    try {
+      const request = await fetch(url);
+      const resp = await request.json();
+      const messages = resp.map((msg) => {
+        const dateObject = new Date();
+        const date = moment(dateObject).format("Do MMM YYYY, h:mm'");
+        const msgInfo = {
+          author: msg.author,
+          message: msg.message,
+          timestamp: date,
+          userId: msg._id,
+        };
+        return msgInfo;
+      });
+
+      setMessageArray(messages);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const onAddMessageHandler = async (message) => {
-    // Post request
+    // Post messages request
     const url = "https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0";
     const token = "hHoTRd9y8HYs";
     const user = {
