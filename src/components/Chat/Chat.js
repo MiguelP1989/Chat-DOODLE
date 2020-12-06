@@ -1,5 +1,5 @@
 // Third-party imports
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import moment from "moment";
 
 // Global imports
@@ -15,13 +15,18 @@ const Chat = ({ location }) => {
   // Hooks
   const [messageArray, setMessageArray] = useState([]);
   const [name, setName] = useState("");
+  const elementRef = useRef();
+
+  const setScroll = (elementRef) => {
+    elementRef.current.scrollTop =
+      elementRef.current.scrollHeight - elementRef.current.clientHeight;
+  };
 
   useEffect(() => {
     const query = new URLSearchParams(location.search);
     for (let param of query.entries()) {
       setName(param[1]);
     }
-
     fetchMessages();
   }, []);
 
@@ -44,6 +49,7 @@ const Chat = ({ location }) => {
       });
 
       setMessageArray(messages);
+      setScroll(elementRef);
     } catch (err) {
       console.log(err);
     }
@@ -83,6 +89,7 @@ const Chat = ({ location }) => {
           },
         ];
       });
+      setScroll(elementRef);
     } catch (err) {
       console.log(err);
     }
@@ -90,7 +97,7 @@ const Chat = ({ location }) => {
 
   return (
     <div className="container">
-      <div className="chat-container">
+      <div className="chat-container" ref={elementRef}>
         <MessageCard name={name} messages={messageArray} />
       </div>
       <div className="form-container ">

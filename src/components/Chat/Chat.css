@@ -12,16 +12,18 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  justify-content: flex-end;
 }
 
 .chat-container {
   padding: 0 24px 16px 14px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   width: 70%;
-  height: 90%;
+  height: 700px;
   box-shadow: 1px 3px 70px rgba(169, 166, 166, 0.4);
   background-image: url("../../assets/Body\ BG.png");
   margin: 0 auto;
+  overflow: scroll;
 }
