@@ -1,6 +1,7 @@
 // Third-party imports
 
 // Global imports
+import Chat from "../src/components/Chat/Chat";
 
 // Local imports
 import "./App.css";
@@ -8,7 +9,7 @@ import "./App.css";
 ////////////////////////////////////////////////////////////////////////////////
 
 const App = () => {
-  return <div>Hello World</div>;
+  return <Chat />;
 };
 
 export default App;
