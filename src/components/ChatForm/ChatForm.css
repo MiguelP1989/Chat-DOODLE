@@ -1,0 +1,30 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  background-color: dodgerblue;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+input {
+  width: 80%;
+  height: 34.5px;
+  margin-right: 5px;
+  outline: none;
+  padding-left: 8.8px;
+  border: 1px solid white;
+}
+
+button {
+  padding: 10px;
+  background-color: lightsalmon;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}

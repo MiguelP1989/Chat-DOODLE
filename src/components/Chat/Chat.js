@@ -1,6 +1,7 @@
 // Third-party imports
 
 // Global imports
+import ChatForm from "../ChatForm/ChatForm";
 
 // Local imports
 import "./Chat.css";
@@ -23,10 +24,7 @@ const Chat = () => {
         </div>
       </div>
       <div className="form-container ">
-        <form>
-          <input />
-          <button>Send</button>
-        </form>
+        <ChatForm />
       </div>
     </div>
   );

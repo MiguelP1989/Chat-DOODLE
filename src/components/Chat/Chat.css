@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 600px;
+  width: 70%;
   height: 90%;
   box-shadow: 1px 3px 70px rgba(169, 166, 166, 0.4);
   background-image: url("../../assets/Body\ BG.png");
@@ -56,37 +56,4 @@
   color: lightgray;
   font-weight: bold;
   font-size: 12px;
-}
-
-/* ////////////////////////// FORM /////////////////////////// */
-
-.form-container {
-  display: flex;
-  justify-content: center;
-}
-
-form {
-  background-color: dodgerblue;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-}
-input {
-  width: 80%;
-  height: 34.5px;
-  margin-right: 5px;
-  outline: none;
-  padding-left: 8.8px;
-  border: 1px solid white;
-}
-
-button {
-  padding: 10px;
-  background-color: lightsalmon;
-  border: none;
-  color: white;
-  cursor: pointer;
-  outline: none;
 }
