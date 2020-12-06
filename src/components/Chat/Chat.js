@@ -91,7 +91,7 @@ const Chat = ({ location }) => {
   return (
     <div className="container">
       <div className="chat-container">
-        <MessageCard messages={messageArray} />
+        <MessageCard name={name} messages={messageArray} />
       </div>
       <div className="form-container ">
         <ChatForm onAddMessage={onAddMessageHandler} />

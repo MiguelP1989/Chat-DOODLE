@@ -3,7 +3,13 @@
   flex-direction: row-reverse;
 }
 
-.chat-message {
+.chat-log-left {
+  display: flex;
+  align-self: end;
+}
+
+.chat-message-right,
+.chat-message-left {
   padding: 16px;
   margin-top: 16px;
   border-radius: 5px;
@@ -11,12 +17,21 @@
   display: flex;
   align-self: end;
   max-width: 240px;
+}
+.chat-message-left {
+  background-color: white;
+}
+.chat-message-right {
   background-color: #fff8cd;
 }
 
 .text-box {
   display: flex;
   flex-direction: column;
+}
+.author {
+  color: lightgray;
+  font-weight: bold;
 }
 
 .timestamp_div {
