@@ -18,6 +18,9 @@ const ChatForm = ({ onAddMessage }) => {
 
   const onSendMessage = (e) => {
     e.preventDefault();
+    if (!inputText) {
+      return;
+    }
     onAddMessage({ inputText });
     setInputText("");
   };
