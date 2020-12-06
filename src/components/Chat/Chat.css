@@ -25,35 +25,3 @@
   background-image: url("../../assets/Body\ BG.png");
   margin: 0 auto;
 }
-
-/* ////////////////////////// MESSAGE /////////////////////////// */
-
-.chat-log {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.chat-message {
-  padding: 16px;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  display: flex;
-  align-self: end;
-  max-width: 240px;
-  background-color: #fff8cd;
-}
-
-.text-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.timestamp_div {
-  width: 100%;
-  text-align: right;
-}
-.timestamp_p {
-  color: lightgray;
-  font-weight: bold;
-  font-size: 12px;
-}

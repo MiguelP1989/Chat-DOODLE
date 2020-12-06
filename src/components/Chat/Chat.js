@@ -4,6 +4,7 @@ import moment from "moment";
 
 // Global imports
 import ChatForm from "../ChatForm/ChatForm";
+import MessageCard from "../MessageCard/MessageCard";
 
 // Local imports
 import "./Chat.css";
@@ -56,16 +57,7 @@ const Chat = () => {
   return (
     <div className="container">
       <div className="chat-container">
-        <div className="chat-log">
-          <div className="chat-message">
-            <div className="text-box">
-              <p>Hello, how are you?</p>
-              <div className="timestamp_div">
-                <p className="timestamp_p">12 Mars 2010</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <MessageCard messages={messageArray} />
       </div>
       <div className="form-container ">
         <ChatForm onAddMessage={onAddMessageHandler} />
