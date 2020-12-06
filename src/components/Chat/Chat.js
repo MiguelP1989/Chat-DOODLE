@@ -11,11 +11,17 @@ import "./Chat.css";
 
 ////////////////////////////////////////////////////////////////////////////////
 
-const Chat = () => {
+const Chat = ({ location }) => {
   // Hooks
   const [messageArray, setMessageArray] = useState([]);
+  const [name, setName] = useState("");
 
   useEffect(() => {
+    const query = new URLSearchParams(location.search);
+    for (let param of query.entries()) {
+      setName(param[1]);
+    }
+
     fetchMessages();
   }, []);
 
@@ -49,7 +55,7 @@ const Chat = () => {
     const token = "hHoTRd9y8HYs";
     const user = {
       message: message.inputText,
-      author: "Joao",
+      author: name,
     };
     const data = JSON.stringify(user);
     try {
