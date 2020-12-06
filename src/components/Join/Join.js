@@ -8,7 +8,10 @@ import { Link } from "react-router-dom";
 import "./Join.css";
 
 ////////////////////////////////////////////////////////////////////////////////
-
+/**
+ * @function Join
+ * @description Displays the card for users to have access to the chat
+ */
 const Join = () => {
   // Hooks
   const [name, setName] = useState("");

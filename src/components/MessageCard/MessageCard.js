@@ -6,7 +6,12 @@
 import "./MessageCard.css";
 
 ////////////////////////////////////////////////////////////////////////////////
-
+/**
+ * @function MessageCard
+ * @description Displays the messages content.
+ * @param {array} messages - It contain the messages to be displayed.
+ * @param {string} name - Determines if the messages should display on the right or on the left comparing with the msg.author.
+ */
 const MessageCard = ({ messages, name }) => {
   return (
     <>

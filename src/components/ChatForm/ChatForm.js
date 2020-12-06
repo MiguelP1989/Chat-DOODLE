@@ -9,7 +9,7 @@ import "./ChatForm.css";
 ////////////////////////////////////////////////////////////////////////////////
 /**
  * @function ChatForm
- * @description Component to render the chat form.
+ * @description It displays the chat form.
  * @param {function}  onAddMessage - it takes the input message to be sent to the API in a post request
  */
 const ChatForm = ({ onAddMessage }) => {

@@ -32,7 +32,7 @@ const Chat = ({ location }) => {
 
   const fetchMessages = async () => {
     // Get messages request
-    const url = `https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=hHoTRd9y8HYs&since=1607269686876`;
+    const url = `https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=hHoTRd9y8HYs&since=1607293472669`;
     try {
       const request = await fetch(url);
       const resp = await request.json();
