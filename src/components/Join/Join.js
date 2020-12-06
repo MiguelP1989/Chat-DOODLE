@@ -28,7 +28,7 @@ const Join = () => {
   };
 
   const linkProps = {
-    onClick: (e) => (!name ? e.preventDefault() : null),
+    onClick: (e) => !name && e.preventDefault(),
     to: `/chat?name=${name}`,
   };
   return (

@@ -32,6 +32,7 @@
 .author {
   color: lightgray;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .timestamp_div {

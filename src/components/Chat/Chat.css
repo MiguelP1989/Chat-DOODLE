@@ -15,27 +15,32 @@
   flex-direction: column;
 }
 
-.chat-container {
+.chat-outer-container {
   padding: 0 24px 16px 14px;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  overflow-y: auto;
+  flex-direction: column-reverse;
+  width: 55%;
   height: 90%;
   box-shadow: 1px 3px 70px rgba(169, 166, 166, 0.4);
   background-image: url("../../assets/Body\ BG.png");
   margin: 0 auto;
-  overflow: scroll;
+}
+
+.chat-inner-container {
+  flex: 0 0 auto;
 }
 
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 55%;
 }
 
-@media (max-width: 500px) {
-  .chat-container {
+@media (max-width: 600px) {
+  .chat-outer-container {
     width: 95%;
   }
   .form-container {
