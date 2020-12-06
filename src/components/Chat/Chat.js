@@ -9,6 +9,9 @@ import "./Chat.css";
 ////////////////////////////////////////////////////////////////////////////////
 
 const Chat = () => {
+  const onAddMessageHandler = (message) => {
+    console.log("message added ", message);
+  };
   return (
     <div className="container">
       <div className="chat-container">
@@ -24,7 +27,7 @@ const Chat = () => {
         </div>
       </div>
       <div className="form-container ">
-        <ChatForm />
+        <ChatForm onAddMessage={onAddMessageHandler} />
       </div>
     </div>
   );
