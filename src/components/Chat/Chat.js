@@ -34,6 +34,9 @@ const Chat = ({ location }) => {
     fetchMessages();
   }, []);
 
+  const dateObject = new Date();
+  const date = moment(dateObject).format("Do MMM YYYY, h:mm'");
+
   const fetchMessages = async () => {
     // Get messages request
     const url = `https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=hHoTRd9y8HYs&since=1607293472669`;
@@ -41,8 +44,6 @@ const Chat = ({ location }) => {
       const request = await fetch(url);
       const resp = await request.json();
       const messages = resp.map((msg) => {
-        const dateObject = new Date();
-        const date = moment(dateObject).format("Do MMM YYYY, h:mm'");
         const msgInfo = {
           author: msg.author,
           message: msg.message,
@@ -78,8 +79,6 @@ const Chat = ({ location }) => {
         body: data,
       });
       const resp = await request.json();
-      const dateObject = new Date();
-      const date = moment(dateObject).format("Do MMM YYYY, h:mm'");
 
       // Setting messages info in state
       setMessageArray((prevMsg) => {

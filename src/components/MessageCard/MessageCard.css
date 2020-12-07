@@ -28,6 +28,7 @@
 .text-box {
   display: flex;
   flex-direction: column;
+  line-height: 1.5;
 }
 .author {
   color: lightgray;
@@ -43,4 +44,11 @@
   color: lightgray;
   font-weight: bold;
   font-size: 12px;
+}
+
+@media (min-width: 600px) {
+  .chat-message-right,
+  .chat-message-left {
+    max-width: 420px;
+  }
 }

@@ -6,7 +6,6 @@ import Chat from "../src/components/Chat/Chat";
 import Join from "../src/components/Join/Join";
 
 // Local imports
-import "./App.css";
 
 ////////////////////////////////////////////////////////////////////////////////
 
