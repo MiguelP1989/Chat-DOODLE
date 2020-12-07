@@ -12,7 +12,7 @@ import "./Chat.css";
 ////////////////////////////////////////////////////////////////////////////////
 /**
  * @function Chat
- * @description It displays the Chatform and the MessageCard components.
+ * @description It displays the ChatForm and the MessageCard components.
  * @param {object}  location - Provided by the router - used to get access to the query params
  */
 const Chat = ({ location }) => {

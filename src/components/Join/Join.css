@@ -23,7 +23,9 @@
   display: flex;
   margin-top: 25px;
 }
-
+.join-btn {
+  width: 100%;
+}
 @media (max-width: 600px) {
   .inner-container {
     height: 300px;
